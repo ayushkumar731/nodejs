@@ -13,7 +13,7 @@ db.once('open', function () {
   console.log('connected to the database');
 });
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false }));
 app.use(express.json());
 
 app.get('/', function (req, res) {
