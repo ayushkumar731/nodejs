@@ -13,6 +13,9 @@ db.once('open', function () {
   console.log('connected to the database');
 });
 
+app.use(express.urlencoded());
+app.use(express.json());
+
 app.get('/', function (req, res) {
   res.send('Hello World')
 })
